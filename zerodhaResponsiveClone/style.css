@@ -1,0 +1,290 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 100px;
+  width: 100%;
+}
+.nav1 img{
+  height: 18px;
+  
+}
+.nav2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+@media (max-width:960px) {
+  .nav2 a{
+    display: none;
+  }
+  nav{
+    padding: 30px 20px;
+    width: 100%;
+
+  }
+}
+.nav2 a{
+  text-decoration: none;
+  color: #666666;
+}
+.nav2 i{
+  font-size: 1.5rem;
+}
+.nav2 a:hover{
+  cursor: pointer;
+  color: #387ed1;
+}
+.hero{
+  width: 100% ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.hero img{
+  width: 100%;
+  max-width: 500px;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heroText{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+.heroText button{
+  margin-top: 1rem;
+  border: none;
+  background-color: #387ed1;
+  border-radius: 5px;
+  height: 40px;
+  width: 170px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+.heroText h4{
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  color:#424242 ;
+  font-weight: 500;
+
+}
+.heroText h6{
+  width: 100%;
+  font-size: 1.5rem;
+  color: #424242;
+  font-weight: 400;
+}
+
+@media (max-width:500px){
+  .heroText h4{
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  color:#424242 ;
+  font-weight: 500;
+
+}
+.heroText h6{
+  width: 100%;
+  font-size: 1rem;
+  color: #424242;
+  font-weight: 400;
+  padding:0 1rem;
+}
+  
+}
+
+.About{
+  display: flex;
+  text-align: center;
+  
+}
+.scope{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 4rem;
+  padding: 2rem;
+  
+}
+.scope h4{
+font-size: 1.3rem;
+color: #424242;
+font-weight: 500;
+}
+.scope h5{
+font-size: 1.1rem;
+color: #424242;
+font-weight: 500;
+
+
+
+}
+.scope h6{
+font-size: 1rem;
+color: #666666;
+font-weight: 400;
+margin-top: 0.8rem;
+}
+.analytics img{
+width: 100;
+max-width: 300px;
+height: auto;
+
+}
+.analytics a{
+display: flex;
+gap: 2rem;
+align-items: center;
+justify-content: center;
+padding-bottom: 1rem;
+text-decoration: none;
+color: #387ed1;
+font-weight: 500;
+font-size: 1rem;
+font-family: Arial, Helvetica, sans-serif;
+}
+.analytics a:hover{
+  cursor: pointer;
+  color: #424242;
+}
+.companies img
+{
+width: 100%;
+height: auto;
+padding: 2rem 1rem;
+}
+.Pricing{
+  display: flex;
+  text-align: left;
+}
+.price h5{
+font-size: 1.2rem;
+padding: 1rem;
+color: #424242;
+font-weight: 500;
+}
+.price h6{
+  font-size: 0.9rem;
+  line-height: 1rem;
+  color: #424242;
+  font-weight: 400;
+  padding: 0 1rem;
+}
+.money{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 100%;
+  padding-left: 1.5rem;
+}
+.fees{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  font-size: 0.5rem;
+  text-align: start;
+  
+}
+.fees img{
+  width: 80px;
+}
+.see a{
+text-decoration: none;
+color: #387ed1;
+font-weight: 500;
+font-size: 1rem;
+font-family: Arial, Helvetica, sans-serif}
+.see a:hover{
+  cursor: pointer;
+  color: #424242;
+}
+.edu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   color: #424242;
+
+}
+.edu .first{
+  padding: 2rem;
+}
+.edu .first img{
+  width: 100%;
+max-width: 450px;
+}
+.edu .second{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem 1rem;
+  gap: 1rem;
+}
+
+.edu .second h4{
+ font-size: 1.2rem;
+ margin-bottom: 1rem;
+ font-weight: 500;
+}
+
+.edu .second h6{
+ line-height: 18px;
+ font-size: 1rem;
+ font-weight: 400;
+}
+.edu .second a{
+  text-decoration: none;
+  padding-bottom: 1.5rem;
+    font-weight: 550;
+     color: #387ed1;
+
+}
+.edu .second a:hover{
+ cursor: pointer;
+  color: #424242;
+ }
+ .account{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  color: #424242;
+ }
+ .account h4{
+   font-size: 1.2rem;
+ font-weight: 500;
+ }
+ .account h6{
+  text-align: center;
+ font-size: 1rem;
+ font-weight: 400;
+ }
+ .account button{
+  border: none;
+  background-color: #387ed1;
+  border-radius: 5px;
+  height: 40px;
+  width: 170px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+ }
