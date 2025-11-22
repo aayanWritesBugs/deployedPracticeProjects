@@ -1,67 +1,86 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 100px;
+html,
+body {
   width: 100%;
 }
-.nav1 img{
-  height: 18px;
-  
+body {
+  position: relative;
 }
-.nav2{
+nav {
+  width: 100%;
+  position: fixed;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  padding: 1.5rem 0.6rem;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  z-index: 100;
 }
-@media (max-width:960px) {
-  .nav2 a{
+
+.nav1 img {
+  max-height: 18px;
+}
+.nav2 {
+  display: none;
+  flex-wrap: nowrap;
+}
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1.5rem;
+  }
+  .nav2 {
+    display: flex;
+    gap: 50px;
+  }
+  .nav2 a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 1.1rem;
+    font-weight: 500;
+    justify-content: center;
+  }
+  .nav2 a:hover {
+    cursor: pointer;
+    color: #387ed1;
+  }
+  .navButton {
     display: none;
   }
-  nav{
-    padding: 30px 20px;
-    width: 100%;
-
-  }
 }
-.nav2 a{
-  text-decoration: none;
-  color: #666666;
-  
+.navButton i {
+  font-size: 1.2rem;
+  border: none;
+  background-color: white;
 }
-.nav2 i{
-  font-size: 1.5rem;
-}
-.nav2 a:hover{
-  cursor: pointer;
-  color: #387ed1;
-}
-.hero{
-  width: 100% ;
+.hero {
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding-top: 3rem;
+  align-items: center;;
+  padding: 1.5rem 1rem;
+
 }
-.hero img{
+.hero img {
+  padding-top: 2rem;
   width: 100%;
   max-width: 500px;
 }
-section{
+.hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
-.heroText{
-  width: 100%;
+.heroText {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,202 +88,221 @@ section{
   gap: 1rem;
   text-align: center;
 }
-.heroText button{
+.cta button {
   margin-top: 1rem;
   border: none;
   background-color: #387ed1;
   border-radius: 5px;
   height: 40px;
   width: 170px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: white;
 }
-.heroText h4{
-  margin-top: 1.5rem;
-  font-size: 2rem;
-  color:#424242 ;
-  font-weight: 500;
 
-}
-.heroText h6{
-  width: 100%;
-  font-size: 1.5rem;
-  color: #424242;
-  font-weight: 400;
-}
-
-@media (max-width:500px){
-  .heroText h4{
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
-  color:#424242 ;
-  font-weight: 500;
-
-}
-.heroText h6{
-  width: 100%;
-  font-size: 1rem;
-  color: #424242;
-  font-weight: 400;
-  padding:0 1rem;
-}
-  
-}
-
-.About{
+section .About {
   display: flex;
-  text-align: center;
-  
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 1rem;
 }
-.scope{
+.Abouttext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+}
+.Abouttext h2 {
+  font-size: 1.6rem;
+  color: #424242;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+.Abouttext h4 {
+  padding-bottom: 1rem;
+  width: 100%;
+  font-size: 1.4rem;
+  color: #424242;
+  font-weight: 500;
+}
+
+.Abouttext h6 {
+  width: 100%;
+  font-size: 1.2rem;
+  color: #424242;
+  font-weight: 400;
+}
+.aboutImg {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.aboutImg img {
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 700px;
+}
+.aboutImg a {
+  text-decoration: none;
+  color: #387ed1;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.aboutImg div a:hover {
+  text-decoration: none;
+  color: #666666;
+}
+.company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.company img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  padding: 2rem 1rem;
+}
+.pricing {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  margin-top: 4rem;
-  padding: 2rem;
-  
+  padding: 2rem 1rem;
 }
-.scope h4{
-font-size: 1.3rem;
-color: #424242;
-font-weight: 500;
-}
-.scope h5{
-font-size: 1.1rem;
-color: #424242;
-font-weight: 500;
-
-
-
-}
-.scope h6{
-font-size: 1rem;
-color: #666666;
-font-weight: 400;
-margin-top: 0.8rem;
-}
-.analytics img{
-width: 100;
-max-width: 300px;
-height: auto;
-
-}
-.analytics a{
-display: flex;
-gap: 2rem;
-align-items: center;
-justify-content: center;
-padding-bottom: 1rem;
-text-decoration: none;
-color: #387ed1;
-font-weight: 500;
-font-size: 1rem;
-font-family: Arial, Helvetica, sans-serif;
-}
-.analytics a:hover{
-  cursor: pointer;
-  color: #424242;
-}
-.companies img
-{
-width: 100%;
-height: auto;
-padding: 2rem 1rem;
-}
-.Pricing{
-  display: flex;
-  text-align: left;
-}
-.price h5{
-font-size: 1.2rem;
-padding: 1rem;
-color: #424242;
-font-weight: 500;
-}
-.price h6{
-  font-size: 0.9rem;
-  line-height: 1rem;
-  color: #424242;
-  font-weight: 400;
-  padding: 0 1rem;
-}
-.money{
-  display: flex;
-  flex-direction: column;
-  margin-top: 2rem;
-  width: 100%;
-  padding-left: 1.5rem;
-}
-.fees{
-  width: 70%;
-  display: flex;
-  align-items: center;
-  font-size: 0.5rem;
-  text-align: start;
-  
-}
-.fees img{
-  width: 80px;
-}
-.see a{
-text-decoration: none;
-color: #387ed1;
-font-weight: 500;
-font-size: 1rem;
-font-family: Arial, Helvetica, sans-serif}
-.see a:hover{
-  cursor: pointer;
-  color: #424242;
-}
-.edu{
+.pricingtext {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-   color: #424242;
-
+  gap: 1rem;
+  text-align: center;
 }
-.edu .first{
-  padding: 2rem;
+.pricingtext h4 {
+  font-size: 1.5rem;
+  color: #424242;
+  font-weight: 600;
 }
-.edu .first img{
+.pricingtext h6 {
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 400;
+  max-width: 600px;
+  line-height: 1.4;
+}
+.pricingtext a {
+  text-decoration: none;
+  color: #387ed1;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.fees {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fees p {
+  font-size: 1.2rem;
+  color: #424242;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+.fees img {
   width: 100%;
-max-width: 450px;
+  max-width: 180px;
+  height: auto;
 }
-.edu .second{
+.varsity {
   display: flex;
   flex-direction: column;
-  text-align: left;
-  padding: 1rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+.first img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+.second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
+  text-align: center;
 }
-
-.edu .second h4{
- font-size: 1.2rem;
- margin-bottom: 1rem;
- font-weight: 500;
-}
-
-.edu .second h6{
- line-height: 18px;
- font-size: 1rem;
- font-weight: 400;
-}
-.edu .second a{
-  text-decoration: none;
-  padding-bottom: 1.5rem;
-    font-weight: 550;
-     color: #387ed1;
-
-}
-.edu .second a:hover{
- cursor: pointer;
+.second h4 {
+  font-size: 1.5rem;
   color: #424242;
- }
- .account{
+  font-weight: 600;
+}
+.second h6 {
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.second a {
+  text-decoration: none;
+  color: #387ed1;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.second a:hover {
+  color: #666666;
+  cursor: pointer;
+}
+.account {
+  padding: 0 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  color: #424242;
+}
+.account button {
+  border: none;
+  background-color: #387ed1;
+  border-radius: 5px;
+  height: 40px;
+  width: 170px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+
+.account h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.account h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 18px;
+}
+.account a {
+  text-decoration: none;
+  color: #387ed1;
+  font-weight: 550;
+  font-size: 1rem;
+}
+.account a:hover {
+  color: #387ed1;
+  cursor: pointer;
+}
+.account{
   padding: 0 1rem;
   width: 100%;
   display: flex;
@@ -331,4 +369,97 @@ footer{
 }
 .footer-disclaimer{
   display: none;
+}
+@media (min-width: 768px) {
+  .About {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8rem;
+    gap: 2rem;
+  }
+  .Abouttext div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .Abouttext div {
+    width: 400px;
+  }
+  .Abouttext div h6 {
+    padding-bottom: 2rem;
+  }
+  .pricing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .pricingtext {
+    width: 400px;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .pricingtext h6 {
+    font-size: 1.2rem;
+  }
+  .pricingimage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pricingimage img {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+  }
+  .fees {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .fees p {
+    font-size: 0.7rem;
+  }
+  .varsity {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+  .varsity .first,
+  .varsity .second {
+    width: 400px;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .second h6 {
+    font-size: 1.2rem;
+  }
+  .second a {
+    font-size: 1.2rem;
+  }
+  .footerlinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .footer-column{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .footer-disclaimer{
+  display: block;
+  font-size: 0.9rem;
+  color: #666666;
+  line-height: 1.4rem;
+  padding-top: 2rem;
+
+}
 }
